@@ -1,0 +1,6 @@
+
+<button mat-raised-button color="primary" (click)="onButtonClick()" >
+    {{textButton}} {{nbClick}}
+</button>
+
+<h4 *ngIf="nbClick > 10" [class.beaucoup]="nbClick > 20">Vous avez cliquez + de 10 fois</h4>

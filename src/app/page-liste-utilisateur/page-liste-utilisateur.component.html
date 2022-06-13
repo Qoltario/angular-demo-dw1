@@ -1,0 +1,29 @@
+<div class="container">
+    <a mat-raised-button class="mt-4" [routerLink]="['/edition-utilisateur']">Ajouter un utilisateur</a>
+    <div class="row gy-4 mt-4">
+        <div class="col-6" *ngFor="let utilisateur of listeUtilisateur">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{utilisateur.nom}} {{utilisateur.prenom}}</mat-card-title>
+                    <mat-card-subtitle>Simple Utilisateur</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="http://localhost/angular/uploads{{utilisateur.image}}"
+                    alt="Photo">
+                <mat-card-content>
+                    <ul>
+                        <li *ngFor="let comp of utilisateur.competence">{{comp}}</li>
+                    </ul>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-raised-button color="accent" [routerLink]="['/edition-utilisateur', 'utilisateur']">
+                        <mat-icon aria-label="Example home icon">edit</mat-icon>Editer
+                    </a>
+                    <button mat-raised-button (click)="onClickDelete(utilisateur.id)" color="warn">
+                        <mat-icon aria-label="Example home icon">delete</mat-icon>Supprimer
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
