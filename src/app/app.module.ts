@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { PageNonTrouveComponent } from './page-non-trouve/page-non-trouve.component';
+import { PageResultatRechercheComponent } from './page-resultat-recherche/page-resultat-recherche.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PageNonTrouveComponent } from './page-non-trouve/page-non-trouve.compon
     PageConnexionComponent,
     PageListeUtilisateurComponent,
     PageEditionUtilisateurComponent,
-    PageNonTrouveComponent
+    PageNonTrouveComponent,
+    PageResultatRechercheComponent
   ],
   imports: [
     BrowserModule,

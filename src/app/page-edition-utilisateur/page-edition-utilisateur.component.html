@@ -17,13 +17,13 @@
             </mat-form-field>
         </p>
         <p>
+            <input #fileInput type="file" class="d-none" (change)="onChangeFile($event)" />
         <div>
             {{image?.name || 'Aucune image selectionnée'}}
-            <a (click)="fileInput.click()" mat-mini-fab color="primary">
+            <a (click)="fileInput.click(); $event.preventDefault" mat-mini-fab color="primary">
                 <mat-icon>image</mat-icon>
             </a>
         </div>
-            <input #fileInput type="file" class="d-none" (change)="onChangeFile($event)" />
         <p>
             <mat-form-field appearance="fill">
                 <mat-label>Mot de passe</mat-label>
